@@ -140,7 +140,6 @@ app.put('/image', (req,res,next)=>{
     .catch(err=> res.status(400).json('no user, no entries :))'))
 })
 
-app.listen(3000,()=>{
-    console.log('Server is running');
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log(`Server is running on port ${process.env.PORT}`);
 });
-
