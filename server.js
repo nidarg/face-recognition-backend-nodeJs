@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt-nodejs'); // used to encrypt password
 const cors = require('cors'); // to accept http requests, otherwise accepts only https
 
 const knex = require('knex'); // like sequelize -> a package -> SQL query builder
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
 const db = knex({
     client: 'pg',
     connection: {
