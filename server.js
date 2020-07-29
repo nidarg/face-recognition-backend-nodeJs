@@ -10,10 +10,8 @@ const knex = require('knex'); // like sequelize -> a package -> SQL query builde
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'postgres',
-      password : 'george11.02.2014',
-      database : 'face-recognition'
+        connectionString: process.env.DATABASE_URL,
+        ssl:true,
     }
   });
 
